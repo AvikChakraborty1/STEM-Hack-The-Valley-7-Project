@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import ChallengeCard from '../ChallengeCard/ChallengeCard';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import { ScrollView } from 'react-native';
-import ProgressCard from '../MyChallengesPage/ProgressCard';
+import ProgressCard from '../ProgressCard/ProgressCard';
 
 export default function HomePage() {
   const levels = [5, 10, 9, 2, 1, 4, 5, 10, 9, 2, 1, 4]
