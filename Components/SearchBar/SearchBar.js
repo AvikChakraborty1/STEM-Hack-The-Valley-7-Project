@@ -1,7 +1,7 @@
 import { StyleSheet, TextInput, View } from 'react-native';
 
 function SearchBar(props) {
-  const height = props.height != null ? props.height: '200px';
+  const height = props.height != null ? props.height: '25px';
   
   const styles = StyleSheet.create({
     button: {
