@@ -1,23 +1,32 @@
-import { StyleSheet, Button, View } from 'react-native';
+import { StyleSheet, Text, Pressable, View } from 'react-native';
 
 function HTVButton() {
   return (
-    <View>
-      <Button
-        title="Press me"
-        onPress={alert('Simple Button pressed')}
-      />
+    <View style={styles.button}>
+      <Pressable
+      style={styles.button}
+      >
+        <Text style={styles.text}>
+          Hello
+        </Text>
+      </Pressable>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  button: {
+    paddingLeft: '50px',
+    paddingRight: '50px',
+    paddingVertical: '5px',
+    backgroundColor: '#E4EFCB',
+    borderRadius: '25px',
   },
+  text: {
+    color: '#7D7973',
+    fontSize: '20px',
+    fontWeight: 'Medium'
+  }
 });
 
 export default HTVButton;
