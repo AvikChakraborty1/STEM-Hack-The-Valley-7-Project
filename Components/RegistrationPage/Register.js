@@ -13,7 +13,19 @@ function RegisterPage() {
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
+<<<<<<< Updated upstream
   const navigation = useNavigation();
+=======
+  const handleSignUp = () =>{
+    auth
+    .createUserWithEmailAndPassword(email,password)
+    .then(userCredentials =>{
+      const user = userCredentials.user;
+      console.log(user.email)
+    })
+    .catch(error => alert(error.message))
+  }
+>>>>>>> Stashed changes
 
   const onRegisterPressed = () => {
     console.warn("register pressed");
@@ -71,7 +83,7 @@ function RegisterPage() {
 
       <View style={styles.signinbutton}>
       <Pressable style={styles.registerbutton}>
-        <Text style={styles.text} onPress = {onRegisterPressed}>
+        <Text style={styles.text} onPress = {handleSignUp}>
           Register
         </Text>
       </Pressable>
