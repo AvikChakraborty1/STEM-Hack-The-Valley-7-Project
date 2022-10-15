@@ -1,14 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import React, { useState, useEffect } from 'react';
-import HTVButton from './Components/HTVButton/HTVButton';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
-  const [name, setName] = useState(1)
   return (
     <View style={styles.container}>
-      <Text>Hello world! hi { name }</Text>
-      <HTVButton />
+      <Text>Hello world!</Text>
       <StatusBar style="auto" />
     </View>
   );
