@@ -4,6 +4,7 @@ import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-nativ
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/app';
 
 
 function RegisterPage() {
@@ -13,9 +14,8 @@ function RegisterPage() {
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
-<<<<<<< Updated upstream
   const navigation = useNavigation();
-=======
+
   const handleSignUp = () =>{
     auth
     .createUserWithEmailAndPassword(email,password)
@@ -25,7 +25,6 @@ function RegisterPage() {
     })
     .catch(error => alert(error.message))
   }
->>>>>>> Stashed changes
 
   const onRegisterPressed = () => {
     console.warn("register pressed");
