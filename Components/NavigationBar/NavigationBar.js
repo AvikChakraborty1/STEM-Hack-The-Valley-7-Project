@@ -19,7 +19,7 @@ function NavigationBar() {
           </Pressable>
           <Pressable style={styles.icon}>
             <Image source={imageIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Library</Text>
+            <Text>Profile</Text>
           </Pressable>
         </View>
       </View>
