@@ -1,16 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StatusBar } from 'expo-status-bar';
+import { Image, Text, View, StyleSheet } from 'react-native';
+// import Logo from '../../assets/Logo.png';
 
-export default function App() {
+function LoginPage() {
   return (
-    <View style={styles.container}>
-      <Text>Hello world!</Text>
-      <StatusBar style="auto" />
+    <View>
+      {/* <Image source={ require('../../assets/Logo.png')} style={styles.logo} /> */}
+      <Image
+        style={styles.logo}
+        source={require('../../assets/Logo.png')}
+      />
+      <Text>Sign in screen</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  logo: {
+    width : '70%',
+    height : '100',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -18,3 +27,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default LoginPage;
