@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-native';
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
+import { useNavigation } from '@react-navigation/native';
 
 
 function RegisterPage() {
@@ -12,12 +13,16 @@ function RegisterPage() {
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
+  const navigation = useNavigation();
+
   const onRegisterPressed = () => {
     console.warn("register pressed");
+    navigation.navigate('LoginPage');
   }
 
   const onSignInPressed = () => {
     console.warn("re-naigate to login page")
+    navigation.navigate('LoginPage');
   }
 
   return (
@@ -63,10 +68,6 @@ function RegisterPage() {
         onChangeText={(password) => setPassword(password)}
       />
       </View>
-
-      {/* <View style= {styles.input}>
-        <HTVButton  buttonText = 'Sign In' />
-      </View> */}
 
       <View style={styles.signinbutton}>
       <Pressable style={styles.registerbutton}>
