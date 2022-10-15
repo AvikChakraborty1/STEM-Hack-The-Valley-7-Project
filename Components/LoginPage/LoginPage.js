@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-native';
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
+import { useNavigation } from '@react-navigation/native';
 
 
 function LoginPage() {
@@ -10,12 +11,16 @@ function LoginPage() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
 
+  const navigation = useNavigation();
+
   const onSignInPressed = () => {
     console.warn("sign in pressed");
+    navigation.navigate('BrowsePage');
   }
 
   const onRegisterPressed = () => {
     console.warn("register pressed");
+    navigation.navigate('RegistrationPage');
   }
 
   return (
@@ -58,7 +63,7 @@ function LoginPage() {
       </View>
 
       <Text onPress={onRegisterPressed} style= {{fontSize: '15px', color : '#33601A', marginTop: 15, marginBottom: 15}}>
-        Don't have an account? Register here!
+        Don't have an account? <Text style={styles.underline} >Register here! </Text>
       </Text>
 
     </View>
