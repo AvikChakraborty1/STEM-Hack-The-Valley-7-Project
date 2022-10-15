@@ -1,7 +1,7 @@
 import { StyleSheet, Text, Image, View } from 'react-native'
 
 function ProgressCard(props) {
-  var level: int = props.level ? props.level: 1;
+  var level = props.level ? props.level: 1;
   
   const images = {
     1: require('../../assets/Tree/1.png'),
@@ -21,7 +21,7 @@ function ProgressCard(props) {
       <View style={styles.horizontalLayout}>
         <Image
           source={images[level]}
-          style={{ width: '60%', resizeMode: 'contain', }}
+          style={{ width: '30%', resizeMode: 'contain', }}
         />
         <View style={styles.cardContent}>
         <Text style={styles.label}>Challenge Name</Text>
@@ -63,6 +63,7 @@ const styles = StyleSheet.create({
   horizontalLayout: {
     alignSelf: 'flex-start',
     flexDirection: 'row',
+    width: '100%',
   },
 })
 
