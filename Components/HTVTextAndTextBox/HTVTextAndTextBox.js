@@ -12,9 +12,9 @@ function HTVTextAndTextBox(props) {
         textAlign: 'center'
       },
       textAndTextBoxContainer : {
-        flex : 1,
         //marginBottom : '50px',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginVertical: '20px',
       },
     });
     
