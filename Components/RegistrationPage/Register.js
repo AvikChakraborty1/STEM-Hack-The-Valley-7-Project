@@ -5,17 +5,19 @@ import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 
 
-function LoginPage() {
+function RegisterPage() {
   const logo = require ('../../assets/Logo.png');
-  const [email, setEmail] = useState(" ");
-  const [password, setPassword] = useState(" ");
-
-  const onSignInPressed = () => {
-    console.warn("sign in pressed");
-  }
+  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [passwordRepeat, setPasswordRepeat] = useState('');
 
   const onRegisterPressed = () => {
     console.warn("register pressed");
+  }
+
+  const onSignInPressed = () => {
+    console.warn("re-naigate to login page")
   }
 
   return (
@@ -25,8 +27,16 @@ function LoginPage() {
       />
 
       <Text style= {{fontSize: '15px', color : '#33601A', marginTop: 15}}>
-        Sign into your account
+        Create an account!
       </Text>
+
+      <View style={styles.button}>
+      <TextInput
+        style={styles.text}
+        placeholder={'Enter Username'}
+        onChangeText={(email) => setEmail(email)}
+      />
+      </View>
 
       <View style={styles.button}>
       <TextInput
@@ -45,20 +55,29 @@ function LoginPage() {
       />
       </View>
 
+      <View style={styles.button}>
+      <TextInput
+        style={styles.text}
+        secureTextEntry={true}
+        placeholder={'Re-Enter Password'}
+        onChangeText={(password) => setPassword(password)}
+      />
+      </View>
+
       {/* <View style= {styles.input}>
         <HTVButton  buttonText = 'Sign In' />
       </View> */}
 
       <View style={styles.signinbutton}>
-      <Pressable style={styles.signinbutton}>
-        <Text style={styles.text} onPress = {onSignInPressed}>
-          Sign In
+      <Pressable style={styles.registerbutton}>
+        <Text style={styles.text} onPress = {onRegisterPressed}>
+          Register
         </Text>
       </Pressable>
       </View>
 
-      <Text onPress={onRegisterPressed} style= {{fontSize: '15px', color : '#33601A', marginTop: 15, marginBottom: 15}}>
-        Don't have an account? Register here!
+      <Text onPress={onSignInPressed} style= {{fontSize: '15px', color : '#33601A', marginTop: 15, marginBottom: 15}}>
+        Already have an account? <Text style={styles.underline} >Sign in here! </Text>
       </Text>
 
     </View>
@@ -67,6 +86,9 @@ function LoginPage() {
 }
 
 const styles = StyleSheet.create({
+  underline : {
+    textDecorationLine : "underline",
+  },
   input : {
     marginTop : 20,
   },
@@ -92,7 +114,7 @@ const styles = StyleSheet.create({
     fontWeight: 'Medium',
     height: 20,
   },
-  signinbutton: {
+  registerbutton: {
     paddingHorizontal: 50,
     paddingVertical: '5px',
     backgroundColor: '#E4EFCB',
@@ -102,4 +124,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginPage;
+export default RegisterPage;

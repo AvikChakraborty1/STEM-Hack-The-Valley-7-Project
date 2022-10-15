@@ -4,7 +4,6 @@ import { StyleSheet, TextInput, View } from 'react-native';
 function HTVTextBox(props) {
   const height = props.height != null ? props.height: '25px';
   const placeholder = props.placeholder != null ? props.placeholder: 'Placeholder'
-  super(props)
 
   const styles = StyleSheet.create({
     button: {
@@ -30,7 +29,6 @@ function HTVTextBox(props) {
         style={styles.text}
         placeholder={placeholder}
         multiline
-        ref={currentFieldEditor}
       />
     </View>
   );
