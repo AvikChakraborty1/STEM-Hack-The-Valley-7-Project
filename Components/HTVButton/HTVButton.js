@@ -12,6 +12,8 @@ function HTVButton(props) {
       paddingVertical: '5px',
       backgroundColor: '#E4EFCB',
       borderRadius: '25px',
+      marginVertical: 8,
+      margin : 25,
     },
     text: {
       color: '#7D7973',

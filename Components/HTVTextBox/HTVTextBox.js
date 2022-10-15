@@ -11,6 +11,7 @@ function HTVTextBox(props) {
       paddingVertical: '10px',
       backgroundColor: '#FBEEDB',
       borderRadius: '25px',
+      marginVertical: 8,
     },
     text: {
       color: '#8F877D',
