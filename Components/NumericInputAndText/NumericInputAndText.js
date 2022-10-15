@@ -26,7 +26,7 @@ function NumericInputAndText(props) {
     return (
       <View style={styles.container}>
         <Text style={styles.text}> { textBoxText }</Text>
-        <HTVTextBox keyboardType = 'numeric' placeholder = {props.placeholder} multiline = {false}></HTVTextBox>
+            <HTVTextBox keyboardType = 'numeric' placeholder = {props.placeholder} multiline = {false}></HTVTextBox>
       </View> 
     );
     

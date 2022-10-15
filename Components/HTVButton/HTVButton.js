@@ -2,7 +2,7 @@ import { StyleSheet, Text, Pressable, View } from 'react-native';
 
 function HTVButton(props) {
 
-  const hpadding = props.hpadding != null ? props.hpadding: 50;
+  const hpadding = props.hpadding != null ? props.hpadding: 25;
   const buttonText = props.buttonText != null ? props.buttonText: 'Enter text';
 
 
@@ -17,7 +17,7 @@ function HTVButton(props) {
     },
     text: {
       color: '#7D7973',
-      fontSize: '20px',
+      fontSize: '15px',
       fontWeight: 'Medium',
       textAlign : 'center'
     }
