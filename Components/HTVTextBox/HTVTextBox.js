@@ -4,6 +4,8 @@ import { StyleSheet, TextInput, View } from 'react-native';
 function HTVTextBox(props) {
   const height = props.height != null ? props.height: '25px';
   const placeholder = props.placeholder != null ? props.placeholder: 'Placeholder';
+  const keyboardType = props.keyboardType ? props.keyboardType: 'default';
+  const multiline = props.multiline === null ? true: props.multiline;
 
   const styles = StyleSheet.create({
     button: {
@@ -28,7 +30,9 @@ function HTVTextBox(props) {
       <TextInput
         style={styles.text}
         placeholder={placeholder}
-        multiline
+        keyboardType = {keyboardType}
+        multiline = {multiline}
+        textAlign = 'center'
       />
     </View>
   );

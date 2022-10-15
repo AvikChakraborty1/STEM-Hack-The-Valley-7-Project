@@ -18,7 +18,8 @@ function HTVButton(props) {
     text: {
       color: '#7D7973',
       fontSize: '20px',
-      fontWeight: 'Medium'
+      fontWeight: 'Medium',
+      textAlign : 'center'
     }
   });
 
