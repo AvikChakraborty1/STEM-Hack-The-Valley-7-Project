@@ -6,6 +6,7 @@ function ChallengeCard(props) {
   const imageURL = props.imageURL ? props.imageURL: 'https://radseason.com/wp-content/uploads/2018/06/MTB-Events-in-the-US-1.jpg';
   const description = props.desc ? props.desc: 'description here';
   const name = props.name ? props.name: 'name';
+  const numParticipants = props.numParticipants ? props.numParticipants: 0;
 
   return (
     <View style={styles.card}>
@@ -21,7 +22,7 @@ function ChallengeCard(props) {
           {description}
         </Text>
         <View style={styles.horizontalLayout}>
-          <Text style={styles.numberOfPeopleText}>54 </Text>
+          <Text style={styles.numberOfPeopleText}>{ numParticipants } </Text>
           <Image source={imageIcon} style={{ width: 20, height: 24 }} />
         </View>
       </View>

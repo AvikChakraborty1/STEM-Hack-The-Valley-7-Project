@@ -43,6 +43,7 @@ export default function BrowsePage() {
         }
       }
       setChallengeList(list)
+      console.log('Challenge', list)
     });
   }
 
@@ -61,7 +62,12 @@ export default function BrowsePage() {
         <ScrollView>
           {
             challengeList.length > 0 && challengeList.map((item) => {
-              return <ChallengeCard name={item.name} desc={item.description} imageURL={item.image}/>
+              return <ChallengeCard 
+              name={item.name} 
+              desc={item.description} 
+              imageURL={item.image} 
+              numParticipants={item.numParticipants} 
+              />
             })
           }
         </ScrollView>
