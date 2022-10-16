@@ -1,6 +1,6 @@
-// import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-native';
+import { auth } from '../../firebase';
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
@@ -11,11 +11,15 @@ function LoginPage() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
 
+<<<<<<< Updated upstream
   const navigation = useNavigation();
+=======
+>>>>>>> Stashed changes
 
   const onSignInPressed = () => {
     console.warn("sign in pressed");
-    navigation.navigate('BrowsePage');
+    // navigation.navigate('BrowsePage');
+    navigation.navigate('HomePage');
   }
 
   const onRegisterPressed = () => {
@@ -26,10 +30,10 @@ function LoginPage() {
   return (
     <View style={styles.container}>
       <Image 
-        source={ logo } style={{width: 100, height: 100}}
+        source={ logo } style={{width: 150, height: 150}}
       />
 
-      <Text style= {{fontSize: '15px', color : '#33601A', marginTop: 15}}>
+      <Text style= {{fontSize: '19px', color : '#33601A', marginTop: 20, marginBottom: 80}}>
         Sign into your account
       </Text>
 
@@ -62,7 +66,9 @@ function LoginPage() {
       </Pressable>
       </View>
 
-      <Text onPress={onRegisterPressed} style= {{fontSize: '15px', color : '#33601A', marginTop: 15, marginBottom: 15}}>
+      <Text 
+        onPress={onRegisterPressed} 
+        style= {{fontSize: '15px', color : '#33601A', marginTop: 25, marginBottom: 10}}>
         Don't have an account? <Text style={styles.underline} >Register here! </Text>
       </Text>
 
@@ -77,9 +83,11 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
+    marginVertical: 20,
     // justifyContent: 'center',
+    marginTop: 20,
   },
   button: {
     paddingLeft: '50px',
@@ -87,23 +95,27 @@ const styles = StyleSheet.create({
     paddingVertical: '10px',
     backgroundColor: '#FBEEDB',
     borderRadius: '25px',
-    marginVertical: 8,
-    marginBottom: 4,
-    marginTop: 8,
+    marginVertical: 20,
+    marginBottom: 25,
+    // marginTop: 20,
+    justifyContent: 'center',
   },
   text: {
     color: '#7D7973',
     fontSize: '20px',
-    fontWeight: 'Medium',
+    fontWeight: 'Light',
     height: 20,
+    alignContent:'center',
   },
   signinbutton: {
-    paddingHorizontal: 50,
-    paddingVertical: '5px',
+    paddingHorizontal: 8,
+    paddingVertical: '3px',
     backgroundColor: '#E4EFCB',
     borderRadius: '25px',
-    marginVertical: 8,
+    marginVertical: 5,
     margin : 25,
+    // marginTop: 10,
+    alignItems:'center',
   },
 });
 

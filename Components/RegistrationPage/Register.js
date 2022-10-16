@@ -4,6 +4,7 @@ import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-nativ
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/app';
 
 
 function RegisterPage() {
@@ -14,6 +15,16 @@ function RegisterPage() {
   const [passwordRepeat, setPasswordRepeat] = useState('');
 
   const navigation = useNavigation();
+
+  const handleSignUp = () =>{
+    auth
+    .createUserWithEmailAndPassword(email,password)
+    .then(userCredentials =>{
+      const user = userCredentials.user;
+      console.log(user.email)
+    })
+    .catch(error => alert(error.message))
+  }
 
   const onRegisterPressed = () => {
     console.warn("register pressed");
@@ -71,7 +82,7 @@ function RegisterPage() {
 
       <View style={styles.signinbutton}>
       <Pressable style={styles.registerbutton}>
-        <Text style={styles.text} onPress = {onRegisterPressed}>
+        <Text style={styles.text} onPress = {handleSignUp}>
           Register
         </Text>
       </Pressable>

@@ -9,8 +9,8 @@ function HTVTextBox(props) {
 
   const styles = StyleSheet.create({
     button: {
-      paddingLeft: '50px',
-      paddingRight: '50px',
+      paddingLeft: '25px',
+      paddingRight: '25px',
       paddingVertical: '10px',
       backgroundColor: '#FBEEDB',
       borderRadius: '25px',

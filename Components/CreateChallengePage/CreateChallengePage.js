@@ -29,7 +29,7 @@ function CreateChallengePage() {
 
        <StartEndNumericInput></StartEndNumericInput>
 
-       <HTVButton></HTVButton>
+       <HTVButton buttonText='Create Challenge'></HTVButton>
       </View> 
     );
     
