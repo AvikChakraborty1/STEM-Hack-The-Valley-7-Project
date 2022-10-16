@@ -1,5 +1,5 @@
 # Overview
-STEM was inspired by our group members, who all experienced failure of a personal health goal. We believed that setting similar goals with our friends and seeing their process will indeed inspire us to work harder towards completing our goal. We also agreed that this may encourage us to start challenges that we see our friends partaking in, which can help us develop healthy lifestyle habits.
+STEM was inspired by our group members, who all experienced failure of a personal health goal. We believed that setting similar goals with our friends and seeing their progress will indeed inspire us to work harder towards completing our goal. We also agreed that this may encourage us to start challenges that we see our friends partaking in, which can help us develop healthy lifestyle habits.
 
 # What it STEM
 STEM provides a space where users can set their health goals in the form of challenges and visualize their progress in the form of a growing tree. Additionally, users can see others' progress within the same challenges to further motivate them. User's can help promote fitness and health by creating their own challenges and inviting their friends, family, and colleagues.
