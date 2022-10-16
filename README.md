@@ -19,6 +19,12 @@ How to be more consistent with version control to work better as a team How to b
 # What's next for STEM
 Adding a live feed page that allows you to see, like, and comment on friend's posts when they post about their progress in a challenge. Partnering with companies to create incentives for certain achievements. (E.g. getting a discount on certain sportswear brands after completing a physical challenge or certain tree level)
 
+# Setup instructions
+- Install node.js
+- Clone git repository
+- run 'npm install' in terminal
+- run 'npm start' and run on your preferred device
+
 
 # Demo
 
