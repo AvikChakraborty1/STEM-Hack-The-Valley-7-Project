@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   text: {
-    color: '#8F877D',
+    color: '#7D7973',
     fontSize: '20px',
     fontWeight: 'Medium',
     height: 20,

@@ -1,23 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import React, { useState, useEffect } from 'react';
-import HTVButton from './Components/HTVButton/HTVButton';
+import BrowsePage from './Components/BrowsePage/BrowsePage';
+import RegisterPage from './Components/RegistrationPage/Register';
+import ProgressCard from './Components/ProgressCard/ProgressCard';
+import HomePage from './Components/HomePage/HomePage';
+import LeaderboardPage from './Components/LeaderboardPage/LeaderboardPage';
 
 export default function App() {
-  const [name, setName] = useState(1)
+  const levels = [5, 10, 9, 2, 1, 4]
   return (
-    <View style={styles.container}>
-      <Text>Hello world! hi { name }</Text>
-      <HTVButton />
-      <StatusBar style="auto" />
-    </View>
+    <LeaderboardPage />
   );
 }
 
 const styles = StyleSheet.create({
+  scroller: {
+    marginBottom: '80px',
+  },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: '1',
+    backgroundColor: '#f9f9f9',
     alignItems: 'center',
     justifyContent: 'center',
   },
