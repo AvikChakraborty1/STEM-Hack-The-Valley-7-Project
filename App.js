@@ -6,7 +6,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginPage from './Components/LoginPage/LoginPage';
 import RegistrationPage from './Components/RegistrationPage/Register';
 import BrowsePage from './Components/BrowsePage/BrowsePage';
-import HomePage from './Components/HomePage/HomePage'
+import HomePage from './Components/HomePage/HomePage';
+import CreateChallengePage from './Components/CreateChallengePage/CreateChallengePage';
+import ProfilePage from './Components/ProfilePage/ProfilePage';
 
 
 const Stack = createNativeStackNavigator();
@@ -14,11 +16,13 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>     
         <Stack.Screen name ="LoginPage" component={LoginPage} /> 
         <Stack.Screen name ="RegistrationPage" component={RegistrationPage} />
         <Stack.Screen name ="BrowsePage" component={BrowsePage} />
         <Stack.Screen name ="HomePage" component={HomePage} />
+        <Stack.Screen name ="CreateChallengePage" component={CreateChallengePage} />
+        <Stack.Screen name ="ProfilePage" component={ProfilePage} />    
       </Stack.Navigator>
       {/* <View style={styles.container}>
         <Text>Hello world! hi { name }</Text>

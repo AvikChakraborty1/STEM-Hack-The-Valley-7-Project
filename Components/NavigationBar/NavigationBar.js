@@ -24,10 +24,10 @@ function NavigationBar() {
     navigation.navigate('CreateChallengePage');
   }
 
-  // const onProfilePressed = () => {
-  //   console.warn("browse pressed");
-  //   navigation.navigate('RegistrationPage');
-  // }
+  const onProfilePressed = () => {
+    console.warn("profile pressed");
+    navigation.navigate('ProfilePage');
+  }
 
   return (
     <View style={styles.card}>
@@ -56,7 +56,9 @@ function NavigationBar() {
           </Pressable>
           <Pressable style={styles.icon}>
             <Image source={imageIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Profile</Text>
+            <Text
+              onPress={onProfilePressed}>
+              Profile</Text>
           </Pressable>
         </View>
       </View>
