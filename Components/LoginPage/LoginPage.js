@@ -61,7 +61,7 @@ function LoginPage() {
         source={ logo } style={{width: 150, height: 150}}
       />
 
-      <Text style= {{fontSize: '19px', color : '#33601A', marginTop: 20, marginBottom: 80}}>
+      <Text style= {{fontSize: '19px', color : '#33601A', marginTop: 20, marginBottom: 20}}>
         Sign into your account
       </Text>
 
