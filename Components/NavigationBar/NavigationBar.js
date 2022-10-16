@@ -35,7 +35,7 @@ function NavigationBar() {
         <View style={styles.horizontalLayout}>
           <Pressable style={styles.icon} 
               onPress={() => onHomePressed()}>
-            <Image source={homeIcon} style={{ minWidth: 30, height: 40 }} />
+            <Image source={homeIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
             <Text >
               Home
             </Text>
@@ -49,13 +49,13 @@ function NavigationBar() {
           </Pressable>
           <Pressable style={styles.icon} 
               onPress={() => onCreatePressed()}>
-            <Image source={createIcon} style={{ minWidth: 30, height: 40 }} />
+            <Image source={createIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
             <Text >
               Create
             </Text>
           </Pressable>
           <Pressable style={styles.icon} onPress={() => onProfilePressed()}>
-            <Image source={imageIcon} style={{ minWidth: 30, height: 40 }} />
+            <Image source={imageIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
             <Text>
               Profile</Text>
           </Pressable>

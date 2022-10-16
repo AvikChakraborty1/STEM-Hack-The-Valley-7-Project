@@ -56,7 +56,7 @@ export default function BrowsePage() {
   return (
     <View style={styles.container}>
       
-      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain', marginTop: '57px'}} />
+      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain', marginTop: '20px'}} />
       <View style={styles.scroller}>
         <ScrollView>
           {
@@ -79,7 +79,7 @@ export default function BrowsePage() {
 const styles = StyleSheet.create({
   scroller: {
     marginBottom: '80px',
-    height: '80%',
+    height: '75%',
   },
   container: {
     flex: '1',
