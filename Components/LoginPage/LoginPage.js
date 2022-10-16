@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: '#8F877D',
+    color: '#7D7973',
     fontSize: '20px',
     fontWeight: 'Light',
     height: 20,

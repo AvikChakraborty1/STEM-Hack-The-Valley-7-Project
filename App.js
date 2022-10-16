@@ -33,9 +33,12 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  scroller: {
+    marginBottom: '80px',
+  },
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: '1',
+    backgroundColor: '#f9f9f9',
     alignItems: 'center',
     justifyContent: 'center',
   },
