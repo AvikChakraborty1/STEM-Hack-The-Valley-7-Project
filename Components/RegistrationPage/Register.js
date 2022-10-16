@@ -41,6 +41,8 @@ function RegisterPage() {
   createUserWithEmailAndPassword(auth, email, password)
   .then(() => {
     console.log('User account created & signed in!');
+    console.log('User signed in!');
+    navigation.navigate('LoginPage');
   })
   .catch(error => {
     if (error.code === 'auth/email-already-in-use') {
