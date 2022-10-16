@@ -2,6 +2,9 @@ import { StyleSheet, Text, Image, View } from 'react-native'
 
 function ProgressCard(props) {
   var level = props.level ? props.level: 1;
+  var name = props.name ? props.name: 'Name';
+  var rank = props.rank ? props.rank: '0';
+
   
   const images = {
     1: require('../../assets/Tree/1.png'),
@@ -24,9 +27,9 @@ function ProgressCard(props) {
           style={{ width: '30%', resizeMode: 'contain', }}
         />
         <View style={styles.cardContent}>
-        <Text style={styles.label}>Challenge Name</Text>
+        <Text style={styles.label}>{name}</Text>
         <Text style={styles.text}>
-          Rank
+          Rank: {rank}
         </Text>
       </View>
       </View>

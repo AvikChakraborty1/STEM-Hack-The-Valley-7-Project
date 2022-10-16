@@ -96,6 +96,7 @@ const styles = StyleSheet.create({
     },
     statsBox: {
         alignItems: "center",
+        paddingHorizontal: '15px',
         flex: 1,
     }
 });

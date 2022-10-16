@@ -29,7 +29,6 @@ export default function BrowsePage() {
   
   const [challengeList, setChallengeList] = useState([]);
   const [refresh, setRefresh] = useState(0)
-  const arr = [1,2,3,4]
 
   const challengeListener = () => {
     const db = getDatabase();
