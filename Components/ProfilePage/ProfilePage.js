@@ -16,13 +16,13 @@ function ProfilePage() {
 
                 <View style= {{ alignSelf:"center" }}>
                     <View style= {styles.profileImage}>
-                        <Image source={ user } style={styles.image} resizeMode="center"></Image>
+                        <Image source={ {uri: 'https://upload.wikimedia.org/wikipedia/commons/1/14/Deadpool_2_Japan_Premiere_Red_Carpet_Ryan_Reynolds_%28cropped%29.jpg'} } style={styles.image} resizeMode="center" resizeMethod="contain"></Image>
                     </View>
                 </View>
 
                 <View style={styles.infocontainer}>
                     <Text style={[styles.text, { fontWeight: "200", fontSize: 36}]}>
-                        Arielle Ramgoolie
+                        Avik Chakraborty
                     </Text>
                 </View>
 
@@ -52,10 +52,12 @@ function ProfilePage() {
 
 const styles = StyleSheet.create({
     container : {
+        paddingTop: '20px',
         flex: 1,
-        backgroundColor: "#fff",
+        backgroundColor: "#ffffff",
         alignItems: "center",
         justifyContent: "center",
+        height: '100%',
     },
     text: {
         fontFamily: "HelveticaNeue",

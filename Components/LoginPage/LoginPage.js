@@ -107,15 +107,14 @@ function LoginPage() {
 
 const styles = StyleSheet.create({
   input : {
-    marginTop : 20,
+    paddingTop : 20,
   },
   container: {
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
-    marginVertical: 20,
     // justifyContent: 'center',
-    marginTop: 20,
+    paddingTop: 20,
   },
   button: {
     paddingLeft: '50px',

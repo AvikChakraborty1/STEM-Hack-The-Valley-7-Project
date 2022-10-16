@@ -3,9 +3,10 @@ import { ImageBackground } from 'react-native-web'
 import ChallengeCard from '../ChallengeCard/ChallengeCard'
 import ProgressCard from './ProgressCard'
 import LeaderboardCard from './LeaderboardCard'
+import NavigationBar from '../NavigationBar/NavigationBar'
 
 function LeaderboardPage(props) {
-  var level = props.level ? props.level : 1
+  var level = props.info.endValue && props.info.progress ? parseInt((props.info.progress / props.info.endValue) * 10, 10)  : 1
 
   const images = {
     1: require('../../assets/Tree/1.png'),
@@ -28,14 +29,23 @@ function LeaderboardPage(props) {
       <ImageBackground source={sky} style={styles.sky}>
         <LeaderboardCard style={styles.leaderboard} /> 
         <Image
-          source={images[9]}
+          source={images[level]}
           style={{ width: '100%', minHeight: '100%', position: 'fixed', marginTop: '10px', resizeMode: 'contain' }}
         />
       </ImageBackground>
       </View>
       <View style={styles.ground}>
-      <ProgressCard style={styles.leaderboard} /> 
-      {/* <Text style={styles.name}> Maaneth De Silva </Text> */}
+        <View style={styles.leaderboard}> 
+          <Text style={{fontWeight: 'bold',
+          fontSize: '20px',
+        }}>Name</Text>
+        <Text style={{fontWeight: 'lighter',
+          fontSize: '20px',
+        }}>Progress: </Text>
+        </View>
+      </View>
+      <View style={styles.ground}>
+      <NavigationBar /> 
       </View>
     </View>
   )
@@ -50,13 +60,17 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
   },
   leaderboard: {
-    color: 'white',
+    textAlign: 'center',
+    marginTop: '10px',
+    backgroundColor: '#E4EFCB',
+    color: 'black',
     fontSize: '30px',
-    marginTop: '20px',
+    paddingVertical: '5px',
+    width: '70%',
   },
   ground: {
     width: '100%',
-    height: '20%',
+    height: '10%',
     backgroundColor: '#431f02',
     alignItems: 'center',
   },

@@ -33,31 +33,30 @@ function NavigationBar() {
     <View style={styles.card}>
       <View style={styles.cardContent}>
         <View style={styles.horizontalLayout}>
-          <Pressable style={styles.icon}>
+          <Pressable style={styles.icon} 
+              onPress={() => onHomePressed()}>
             <Image source={homeIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text 
-              onPress={onHomePressed} >
+            <Text >
               Home
             </Text>
           </Pressable>
-          <Pressable style={styles.icon}>
-            <Image source={searchIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text 
-              onPress={onBrowsePressed} >
+          <Pressable style={styles.icon} 
+              onPress={() => onBrowsePressed()}>
+            <Image source={searchIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
+            <Text >
               Search
             </Text>
           </Pressable>
-          <Pressable style={styles.icon}>
+          <Pressable style={styles.icon} 
+              onPress={() => onCreatePressed()}>
             <Image source={createIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text
-              onPress={onCreatePressed} >
+            <Text >
               Create
             </Text>
           </Pressable>
-          <Pressable style={styles.icon}>
+          <Pressable style={styles.icon} onPress={() => onProfilePressed()}>
             <Image source={imageIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text
-              onPress={onProfilePressed}>
+            <Text>
               Profile</Text>
           </Pressable>
         </View>

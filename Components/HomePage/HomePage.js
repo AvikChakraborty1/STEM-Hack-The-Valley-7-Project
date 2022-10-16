@@ -9,6 +9,8 @@ import ProgressCard from '../ProgressCard/ProgressCard';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue, set } from 'firebase/database';
 import { useNavigation } from '@react-navigation/native';
+import BrowsePage from '../BrowsePage/BrowsePage';
+import LeaderboardPage from '../LeaderboardPage/LeaderboardPage';
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -28,11 +30,10 @@ export default function HomePage() {
 
   const navigation = useNavigation();
   const [challengeList, setChallengeList] = useState([]);
-  const [refresh, setRefresh] = useState(0)
+  const [challengeSelected, setChallengeSelected] = useState(null)
 
-  const onChallengedPressed = () => {
-    console.warn("challenge pressed");
-    navigation.navigate('LeaderboardPage');
+  const onChallengedPressed = (item) => {
+    setChallengeSelected(item)
   }
 
   const challengeListener = () => {
@@ -56,7 +57,15 @@ export default function HomePage() {
     console.log(challengeList)
   }, [])
   
-  return (
+  {
+
+    return (
+      challengeSelected ? 
+      <Pressable onPress={() => onChallengedPressed(null)} style={styles.container}>
+        <LeaderboardPage info={challengeSelected}/>
+      </Pressable>
+      :
+    
     <View style={styles.container}>
       
       <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain'}} />
@@ -65,7 +74,7 @@ export default function HomePage() {
         <View style={styles.container}>
       { challengeList.map((item) => {
         return (
-        <Pressable onPress={() => onChallengedPressed()}>
+        <Pressable onPress={() => onChallengedPressed(item)}>
           <ProgressCard rank={item.rank} name={item.name} level={parseInt((item.progress / item.endValue) * 10, 10)}/>
         </Pressable>
         )
@@ -74,9 +83,12 @@ export default function HomePage() {
       </View>
         </ScrollView>
       </View>
-      <NavigationBar />
+      <Pressable onPress={() => onChallengedPressed(null)}>
+        <NavigationBar />
+      </Pressable>
     </View>
   );
+}
 }
 
 const styles = StyleSheet.create({
