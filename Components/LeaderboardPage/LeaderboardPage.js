@@ -7,6 +7,8 @@ import NavigationBar from '../NavigationBar/NavigationBar'
 
 function LeaderboardPage(props) {
   var level = props.info.endValue && props.info.progress ? parseInt((props.info.progress / props.info.endValue) * 10, 10)  : 1
+  var progress = props.info.progress ? props.info.progress : 0;
+  var name  = props.info.name ? props.info.name: 'Challenge name';
 
   const images = {
     1: require('../../assets/Tree/1.png'),
@@ -38,10 +40,10 @@ function LeaderboardPage(props) {
         <View style={styles.leaderboard}> 
           <Text style={{fontWeight: 'bold',
           fontSize: '20px',
-        }}>Name</Text>
+        }}>{name}</Text>
         <Text style={{fontWeight: 'lighter',
           fontSize: '20px',
-        }}>Progress: </Text>
+        }}>Progress: {progress}</Text>
         </View>
       </View>
       <View style={styles.ground}>

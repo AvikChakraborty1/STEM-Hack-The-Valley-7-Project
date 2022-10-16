@@ -39,7 +39,7 @@ function ProfilePage() {
                     <View style= {styles.statsBox}>
                         <Text style={[styles.text, {fontSize: 24}]}>7</Text>
                         <Text style={[styles.text, styles.subText]}>Challenges</Text>
-                        <Text style={[styles.text, styles.subText]}>Completed</Text>
+                        <Text style={[styles.text, styles.subText]}>Won</Text>
                     </View>
                 </View>
 

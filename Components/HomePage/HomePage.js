@@ -68,7 +68,7 @@ export default function HomePage() {
     
     <View style={styles.container}>
       
-      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain'}} />
+      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain', marginTop: '20px'}} />
       <View style={styles.scroller}>
         <ScrollView>
         <View style={styles.container}>
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   scroller: {
     paddingTop: '10px',
     marginBottom: '80px',
-    height: '80%',
+    height: '75%',
   },
   container: {
     flex: '1',

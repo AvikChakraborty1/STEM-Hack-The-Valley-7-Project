@@ -56,7 +56,7 @@ export default function BrowsePage() {
   return (
     <View style={styles.container}>
       
-      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain'}} />
+      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain', marginTop: '57px'}} />
       <View style={styles.scroller}>
         <ScrollView>
           {
