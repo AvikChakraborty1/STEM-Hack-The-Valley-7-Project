@@ -74,23 +74,65 @@
         "-NEPV_ie5gfGUMo8ojQa": {
           "name": "Biking 20km",
           "description": "Complete a straight 20km bike ride within an hour.",
+          "endValue" : 20,
           "image": "http://dummyimage.com/231x100.png/ff4444/ffffff",
           "numParticipants" : 3,
-          "participants" : ["Avik", "Ryan", "Shadman"]
+          "participants" : [
+            {
+              "name": "Avik Chakraborty",
+              "progress": 10
+            },
+            {
+              "name": "Ryan Khan",
+              "progress": 12
+            },
+            {
+              "name": "Shadman Tajwar",
+              "progress": 14
+            }
+          ]
         },
         "-NEPV_igI9WtqTt_B-6B": {
           "name": "Run 10km",
           "description": "Complete a straight 10km run within an hour",
+          "endValue" : 10,
           "image": "http://dummyimage.com/231x100.png/ff4444/ffffff",
           "numParticipants" : 3,
-          "participants" : ["Avik", "Maaneth", "Arielle"]
+          "participants" : [
+            {
+              "name": "Maaneth De Silva",
+              "progress": 4
+            },
+            {
+              "name": "Arielle Ramgoolie",
+              "progress": 3
+            },
+            {
+              "name": "Avik Chakraborty",
+              "progress": 7
+            }
+          ]
         },
         "-NEPV_ii4AxykuWrXpIy": {
           "name": "50 clean pushups",
           "description": "Complete 50 straight clean pushups",
+          "endValue": 50,
           "image": "http://dummyimage.com/231x100.png/ff4444/ffffff",
           "numParticipants" : 3,
-          "participants" : ["Maaneth", "Ryan", "Shadman"]
+          "participants" : [
+            {
+              "name": "Maaneth De Silva",
+              "progress": 25
+            },
+            {
+              "name": "Ryan Khan",
+              "progress": 17
+            },
+            {
+              "name": "Shadman Tajwar",
+              "progress": 20
+            }
+          ]
         },
         "-NEPV_ijouepLrpTeven": {
           "name": "Read 15 self help books",
