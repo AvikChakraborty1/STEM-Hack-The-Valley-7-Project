@@ -1,5 +1,4 @@
 import {Text, View, StyleSheet } from 'react-native';
-import NumericInput from 'react-native-numeric-input';
 import NumericInputAndText from '../NumericInputAndText/NumericInputAndText';
 
 function StartEndNumericInput() {

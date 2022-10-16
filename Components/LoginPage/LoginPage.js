@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-native';
-import HTVButton from '../HTVButton/HTVButton';
-import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
 
 
