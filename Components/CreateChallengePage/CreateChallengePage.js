@@ -1,10 +1,8 @@
 import {Text, View, StyleSheet } from 'react-native';
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextAndTextBox from '../HTVTextAndTextBox/HTVTextAndTextBox';
-import HTVTextBox from '../HTVTextBox/HTVTextBox';
-import NumericInputAndText from '../NumericInputAndText/NumericInputAndText';
-import SearchBar from '../SearchBar/SearchBar';
 import StartEndNumericInput from '../StartEndNumericInput/StartEndNumericInput';
+import { getDatabase, ref, onValue, set, get, child} from 'firebase/database';
 
 function CreateChallengePage() {
     const styles = StyleSheet.create({
@@ -20,6 +18,23 @@ function CreateChallengePage() {
         width: '40px'
       }
     });
+
+    // const database = getDatabase();
+    // const dbRef = ref(database);
+    // get(child(dbRef, 'Challenges')).then((snapshot) => {
+    //   if (snapshot.exists()){
+    //     foreach(key in snapshot){
+    //       console.log(key.name);
+    //     }
+    //   }
+    //   else{
+    //     console.log("No Data");
+    //   }
+
+    // }).catch((error) => {
+    //   console.log(error);
+    // })
+
     
     return (
       <View style={styles.container}>
