@@ -4,8 +4,29 @@ import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-nativ
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
-import auth from '@react-native-firebase/app';
 
+import { initializeApp } from 'firebase/app';
+
+import {
+  getAuth,
+  createUserWithEmailAndPassword
+} from 'firebase/auth';
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyDYWL3POFDFXDAASpxwi7D_9L19ZyjITfA",
+  authDomain: "hackthevalley-86d05.firebaseapp.com",
+  databaseURL: "https://hackthevalley-86d05-default-rtdb.firebaseio.com",
+  projectId: "hackthevalley-86d05",
+  storageBucket: "hackthevalley-86d05.appspot.com",
+  messagingSenderId: "277759021828",
+  appId: "1:277759021828:web:01abad7b753075bc61b651",
+  measurementId: "G-9KCDJZ9YP3"
+};
+
+let myApp = initializeApp(firebaseConfig);
+
+const auth = getAuth(myApp)
 
 function RegisterPage() {
   const logo = require ('../../assets/Logo.png');
@@ -17,13 +38,21 @@ function RegisterPage() {
   const navigation = useNavigation();
 
   const handleSignUp = () =>{
-    auth
-    .createUserWithEmailAndPassword(email,password)
-    .then(userCredentials =>{
-      const user = userCredentials.user;
-      console.log(user.email)
-    })
-    .catch(error => alert(error.message))
+  createUserWithEmailAndPassword(auth, email, password)
+  .then(() => {
+    console.log('User account created & signed in!');
+  })
+  .catch(error => {
+    if (error.code === 'auth/email-already-in-use') {
+      console.log('That email address is already in use!');
+    }
+
+    if (error.code === 'auth/invalid-email') {
+      console.log('That email address is invalid!');
+    }
+
+    console.error(error);
+  });
   }
 
   const onRegisterPressed = () => {

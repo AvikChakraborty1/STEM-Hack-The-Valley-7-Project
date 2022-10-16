@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { Image, Text, View, StyleSheet, TextInput, Pressable } from 'react-native';
-import { auth } from '../../firebase';
 import HTVButton from '../HTVButton/HTVButton';
 import HTVTextBox from '../HTVTextBox/HTVTextBox';
 import { useNavigation } from '@react-navigation/native';
@@ -11,10 +10,7 @@ function LoginPage() {
   const [email, setEmail] = useState(" ");
   const [password, setPassword] = useState(" ");
 
-<<<<<<< Updated upstream
   const navigation = useNavigation();
-=======
->>>>>>> Stashed changes
 
   const onSignInPressed = () => {
     console.warn("sign in pressed");
