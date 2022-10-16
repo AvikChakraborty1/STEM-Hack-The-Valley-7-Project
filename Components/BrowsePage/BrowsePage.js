@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import ChallengeCard from '../ChallengeCard/ChallengeCard';
@@ -56,7 +56,7 @@ export default function BrowsePage() {
   return (
     <View style={styles.container}>
       
-      <SearchBar />
+      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain'}} />
       <View style={styles.scroller}>
         <ScrollView>
           {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: '1',
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
