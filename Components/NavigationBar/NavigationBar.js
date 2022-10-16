@@ -1,5 +1,6 @@
-import { StyleSheet, Text, Image, View, Pressable } from 'react-native'
+import { StyleSheet, Text, Image, View, Pressable, TextInput } from 'react-native'
 import { useNavigation } from '@react-navigation/native';
+import React from 'react';
 
 function NavigationBar() {
   var imageIcon = require('../../assets/peopleIcon.png')
@@ -9,25 +10,55 @@ function NavigationBar() {
 
   const navigation = useNavigation();
 
+  const onHomePressed = () => {
+    console.warn("sign in pressed");
+    navigation.navigate('HomePage');
+  }
+  const onBrowsePressed = () => {
+    console.warn("browse pressed");
+    navigation.navigate('BrowsePage');
+  }
+
+  const onCreatePressed = () => {
+    console.warn("create pressed");
+    navigation.navigate('CreateChallengePage');
+  }
+
+  const onProfilePressed = () => {
+    console.warn("profile pressed");
+    navigation.navigate('ProfilePage');
+  }
+
   return (
     <View style={styles.card}>
       <View style={styles.cardContent}>
         <View style={styles.horizontalLayout}>
           <Pressable style={styles.icon}>
             <Image source={homeIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Home</Text>
+            <Text 
+              onPress={onHomePressed} >
+              Home
+            </Text>
           </Pressable>
           <Pressable style={styles.icon}>
             <Image source={searchIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Search</Text>
+            <Text 
+              onPress={onBrowsePressed} >
+              Search
+            </Text>
           </Pressable>
           <Pressable style={styles.icon}>
             <Image source={createIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Create</Text>
+            <Text
+              onPress={onCreatePressed} >
+              Create
+            </Text>
           </Pressable>
           <Pressable style={styles.icon}>
             <Image source={imageIcon} style={{ minWidth: 30, height: 40 }} />
-            <Text>Profile</Text>
+            <Text
+              onPress={onProfilePressed}>
+              Profile</Text>
           </Pressable>
         </View>
       </View>

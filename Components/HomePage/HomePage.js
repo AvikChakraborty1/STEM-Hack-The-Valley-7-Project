@@ -20,7 +20,7 @@ export default function HomePage() {
         return <ProgressCard level={i}/>
       })
       }
-    </View>
+      </View>
         </ScrollView>
       </View>
       <NavigationBar />
