@@ -1,54 +1,73 @@
 {
     "Users": {
         "-NEPTSWXJrHj2fWHFpd2": {
-        "name": "Avik Chakraborty",
-        "image": "http://dummyimage.com/231x100.png/ff4444/ffffff",
-        "challenges": [] 
+          "metadata": {
+            "name": "Avik Chakraborty",
+            "image": "http://dummyimage.com/231x100.png/ff4444/ffffff"
+          },
+          "challenges": {
+            "-NEPV_igI9WtqTt_B-6B": {
+              "name":"Run 10km",
+              "progress": 8,
+              "rank": 1
+            },
+            "-NEPV_ijouepLrpTeven": {
+              "name":"Read 15 self help books",
+              "progress": 10,
+              "rank": 1
+            },
+            "-NEPV_ie5gfGUMo8ojQa": {
+              "name":"Biking 20km",
+              "progress": 8,
+              "rank": 1
+            }
+          }
         },
         "-NEPTSWYgcIYpaQ6izXX": {
-        "first_name": "Elmo",
-        "last_name": "Ayllett",
-        "email": "eayllett1@parallels.com"
+          "metadata": {
+            "name": "Arielle Ramgoolie",
+            "image": "http://dummyimage.com/231x100.png/ff4444/ffffff"
+          },
+          "challenges": {
+            "-NEPV_igI9WtqTt_B-6B": {
+              "name":"Run 10km",
+              "progress": 8,
+              "rank": 1
+            },
+            "-NEPV_ijouepLrpTeven": {
+              "name":"Read 15 self help books",
+              "progress": 10,
+              "rank": 1
+            },
+            "-NEPV_ie5gfGUMo8ojQa": {
+              "name":"Biking 20km",
+              "progress": 8,
+              "rank": 1
+            }
+          }
         },
         "-NEPTSW_tP8Yi55cRL2B": {
-        "first_name": "Frederich",
-        "last_name": "Risson",
-        "email": "frisson2@latimes.com"
-        },
-        "-NEPTSWac5PpPpRvQuyA": {
-        "first_name": "Lawrence",
-        "last_name": "Elverston",
-        "email": "lelverston3@networkadvertising.org"
-        },
-        "-NEPTSWb0d_vBkGb0aBB": {
-        "first_name": "Kimberlee",
-        "last_name": "Thorneywork",
-        "email": "kthorneywork4@amazon.co.uk"
-        },
-        "-NEPTSWd6A470gz5ktWJ": {
-        "first_name": "Andrea",
-        "last_name": "Dobrowolski",
-        "email": "adobrowolski5@weibo.com"
-        },
-        "-NEPTSWeBiAZC7CddhSE": {
-        "first_name": "Griffin",
-        "last_name": "Gaither",
-        "email": "ggaither6@washington.edu"
-        },
-        "-NEPTSWfTxqHrtocSkMy": {
-        "first_name": "Cos",
-        "last_name": "Muscroft",
-        "email": "cmuscroft7@nsw.gov.au"
-        },
-        "-NEPTSWhqowWCt7t7vib": {
-        "first_name": "Northrop",
-        "last_name": "Wenden",
-        "email": "nwenden8@reference.com"
-        },
-        "-NEPTSWi1UO6f3TJ3DNu": {
-        "first_name": "Mira",
-        "last_name": "Hospital",
-        "email": "mhospital9@cdbaby.com"
+          "metadata": {
+            "name": "Maaneth De Silva",
+            "image": "http://dummyimage.com/231x100.png/ff4444/ffffff"
+          },
+          "challenges": {
+            "-NEPV_igI9WtqTt_B-6B": {
+              "name":"Run 10km",
+              "progress": 8,
+              "rank": 1
+            },
+            "-NEPV_ijouepLrpTeven": {
+              "name":"Read 15 self help books",
+              "progress": 10,
+              "rank": 1
+            },
+            "-NEPV_ie5gfGUMo8ojQa": {
+              "name":"Biking 20km",
+              "progress": 8,
+              "rank": 1
+            }
+          }
         }
     },
     "Challenges": {
@@ -81,15 +100,15 @@
           "numParticipants" : 3,
           "participants" : [
             {
-              "name": "Avik",
+              "name": "Avik Chakraborty",
               "progress": 10
             },
             {
-              "name": "Arielle",
+              "name": "Arielle Ramgoolie",
               "progress": 5
             },
             {
-              "name": "Shadman",
+              "name": "Shadman Tajwar",
               "progress": 3
             }
           ]
