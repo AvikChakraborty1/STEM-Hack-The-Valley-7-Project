@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f1f1f1"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -18,16 +18,32 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.HTV"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#f1f1f1"
+      },
+      "package": "com.anonymous.HTV"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "cjs",
+        "js",
+        "jsx",
+        "tsx"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "03e0f837-d930-47d2-9a7a-38bdad116f69"
+      }
     }
   }
 }

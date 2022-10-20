@@ -58,7 +58,7 @@ function LoginPage() {
   return (
     <View style={styles.container}>
       <Image 
-        source={ logo } style={{width: 150, height: 150}}
+        source={ logo } style={{width: 150, height: 180}}
       />
 
       <Text style= {{fontSize: '19px', color : '#33601A', marginTop: 20, marginBottom: 20}}>
@@ -106,20 +106,17 @@ function LoginPage() {
 }
 
 const styles = StyleSheet.create({
-  input : {
-    paddingTop : 20,
-  },
   container: {
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'center',
     // justifyContent: 'center',
-    paddingTop: 20,
+    paddingTop: '30%',
   },
   button: {
-    paddingLeft: '50px',
-    paddingRight: '50px',
-    paddingVertical: '10px',
+    paddingLeft: 50,
+    paddingRight: 50,
+    paddingVertical: 10,
     backgroundColor: '#FBEEDB',
     borderRadius: '25px',
     marginVertical: 20,
@@ -129,16 +126,17 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#7D7973',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Light',
     height: 20,
     alignContent:'center',
+    marginVertical: 0, 
   },
   signinbutton: {
     paddingHorizontal: 8,
-    paddingVertical: '3px',
+    paddingVertical: 5,
     backgroundColor: '#E4EFCB',
-    borderRadius: '25px',
+    borderRadius: 25,
     marginVertical: 5,
     margin : 25,
     // marginTop: 10,

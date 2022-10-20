@@ -24,7 +24,7 @@ function ProgressCard(props) {
       <View style={styles.horizontalLayout}>
         <Image
           source={images[level]}
-          style={{ width: '30%', resizeMode: 'contain', }}
+          style={{ width: 120, height: 85, resizeMode: 'contain', }}
         />
         <View style={styles.cardContent}>
         <Text style={styles.label}>{name}</Text>
@@ -39,28 +39,27 @@ function ProgressCard(props) {
 
 const styles = StyleSheet.create({
   card: {
-    width: '100%',
-    paddingVertical: '10px',
-    backgroundColor: '#ffffff',
+    width: 500,
     justifyContent: 'left',
+    height: 150,
   },
   cardContent: {
-    width: '100%',
+    width: 150,
   },
   label: {
-    marginTop: '10px',
+    marginTop: 20,
     color: '#000000',
-    fontSize: '20px',
-    fontWeight: 'Bold',
+    fontSize: 20,
+    fontWeight: '700',
   },
   text: {
-    marginTop: '10px',
+    marginTop: 20,
     color: '#000000',
-    fontSize: '20px',
-    fontWeight: 'Lighter',
+    fontSize: 20,
+    fontWeight: '300',
   },
   numberOfPeopleText: {
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   horizontalLayout: {

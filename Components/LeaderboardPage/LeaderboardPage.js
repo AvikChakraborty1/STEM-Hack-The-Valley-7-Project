@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Image, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 import { ImageBackground } from 'react-native-web'
 import ChallengeCard from '../ChallengeCard/ChallengeCard'
 import ProgressCard from './ProgressCard'

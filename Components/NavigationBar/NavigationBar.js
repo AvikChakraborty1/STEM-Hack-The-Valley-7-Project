@@ -5,8 +5,8 @@ import React from 'react';
 function NavigationBar() {
   var imageIcon = require('../../assets/peopleIcon.png')
   var homeIcon = require('../../assets/homeicon.png')
-  var searchIcon = require('../../assets/magnifying-glass-solid.svg')
-  var createIcon = require('../../assets/square-plus-regular.svg')
+  var searchIcon = require('../../assets/homeicon.png')
+  var createIcon = require('../../assets/homeicon.png')
 
   const navigation = useNavigation();
 
@@ -35,27 +35,27 @@ function NavigationBar() {
         <View style={styles.horizontalLayout}>
           <Pressable style={styles.icon} 
               onPress={() => onHomePressed()}>
-            <Image source={homeIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
+            <Image source={homeIcon} style={{ width: 30, height: 40, resizeMode: 'contain' }} />
             <Text >
               Home
             </Text>
           </Pressable>
           <Pressable style={styles.icon} 
               onPress={() => onBrowsePressed()}>
-            <Image source={searchIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
+            <Image source={searchIcon} style={{ width: 30, height: 40, resizeMode: 'contain' }} />
             <Text >
               Search
             </Text>
           </Pressable>
           <Pressable style={styles.icon} 
               onPress={() => onCreatePressed()}>
-            <Image source={createIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
+            <Image source={createIcon} style={{ width: 30, height: 40, resizeMode: 'contain' }} />
             <Text >
               Create
             </Text>
           </Pressable>
           <Pressable style={styles.icon} onPress={() => onProfilePressed()}>
-            <Image source={imageIcon} style={{ minWidth: 30, height: 40, resizeMode: 'contain' }} />
+            <Image source={imageIcon} style={{ width: 30, height: 40, resizeMode: 'contain' }} />
             <Text>
               Profile</Text>
           </Pressable>
@@ -67,12 +67,12 @@ function NavigationBar() {
 
 const styles = StyleSheet.create({
   card: {
-    width: '100%',
-    height: '85px',
+    width: 160,
+    height: 85,
     backgroundColor: '#ffffff',
     alignItems: 'center',
     position: 'fixed',
-    bottom: '0px',
+    bottom: 0,
   },
   cardContent: {
     width: '90%',
@@ -81,12 +81,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    paddingHorizontal: '20px',
-    paddingVertical: '15px',
+    paddingVertical: 15,
+    width: 350,
   },
   icon: {
-    height: '10px',
-    marginBottom: '10px',
+    height: 30,
+    width: 50,
+    marginBottom: 10,
   },
 })
 
