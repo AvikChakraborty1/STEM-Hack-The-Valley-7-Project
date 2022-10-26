@@ -68,19 +68,24 @@ export default function HomePage() {
     
     <View style={styles.container}>
       
-      <Image source={require('../../assets/stemText.png')} style={{width: '100%', height: 70, resizeMode: 'contain', marginTop: 20}} />
+      <Image source={require('../../assets/stemText.png')} 
+      style={{
+        width: '100%', 
+        height: 70, 
+        resizeMode: 'contain', 
+        marginTop: 20,
+        position: 'fixed',
+        }} />
       <View style={styles.scroller}>
         <ScrollView>
-        <View style={styles.container}>
-      { challengeList.map((item) => {
-        return (
-        <Pressable onPress={() => onChallengedPressed(item)}>
-          <ProgressCard rank={item.rank} name={item.name} level={parseInt((item.progress / item.endValue) * 10, 10)}/>
-        </Pressable>
-        )
-      })
-      }
-      </View>
+        { challengeList.map((item) => {
+          return (
+          <Pressable onPress={() => onChallengedPressed(item)}>
+            <ProgressCard rank={item.rank} name={item.name} level={parseInt((item.progress / item.endValue) * 10, 10)}/>
+          </Pressable>
+          )
+        })
+        }
         </ScrollView>
       </View>
       <Pressable onPress={() => onChallengedPressed(null)}>
@@ -93,16 +98,14 @@ export default function HomePage() {
 
 const styles = StyleSheet.create({
   scroller: {
-    paddingTop: 30,
-    marginBottom: 80,
-    height: '35%',
+    marginTop: 20,
+    height: '72%',
+    backgroundColor: '#ffffff', 
   },
   container: {
     flex: '1',
-    marginTop: 80,
+    marginTop: 30,
     alignItems: 'left',
-    justifyContent: 'center',
-    backgroundColor: '#ffffff',
-    height: '100%',
+    backgroundColor: '#ffffff', 
   },
 });

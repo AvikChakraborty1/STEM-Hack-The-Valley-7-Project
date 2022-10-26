@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   card: {
     width: 500,
     justifyContent: 'left',
-    height: 150,
+    height: 110,
   },
   cardContent: {
     width: 150,
