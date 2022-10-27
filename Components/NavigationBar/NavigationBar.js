@@ -62,7 +62,7 @@ function NavigationBar() {
     </View>
   )
 }
-
+//test remote
 const navbar = StyleSheet.create({
   card: {
     width: '100%',
