@@ -1,5 +1,11 @@
+
+<img width="1440" alt="Screen Shot 2022-10-17 at 11 25 30 AM" src="https://user-images.githubusercontent.com/94875583/196824010-e7486fc5-0c83-43ca-aa41-837f7358ebe8.png">
+
 # Overview
 STEM was inspired by our group members, who all experienced failure of a personal health goal. We believed that setting similar goals with our friends and seeing their progress will indeed inspire us to work harder towards completing our goal. We also agreed that this may encourage us to start challenges that we see our friends partaking in, which can help us develop healthy lifestyle habits.
+
+<img width="1440" alt="Screen Shot 2022-10-17 at 11 23 42 AM" src="https://user-images.githubusercontent.com/94875583/196824043-3945164f-2f90-4ec7-ae71-95b741760577.png">
+
 
 # What it STEM
 STEM provides a space where users can set their health goals in the form of challenges and visualize their progress in the form of a growing tree. Additionally, users can see others' progress within the same challenges to further motivate them. User's can help promote fitness and health by creating their own challenges and inviting their friends, family, and colleagues.
@@ -24,31 +30,3 @@ Adding a live feed page that allows you to see, like, and comment on friend's po
 - Clone git repository
 - run 'npm install' in terminal
 - run 'npm start' and run on your preferred device
-
-
-# Demo
-
-<h3>Logo</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038896-788db8b6-3d32-44de-9d41-afaab14a40b9.png)
-
-<h3>Register page</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038907-0499a22d-3704-4ad0-af16-8b70bbf44cbb.png)
-
-<h3>Login page</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038923-5a901eac-467b-4279-b1d0-b3cf6fab9222.png)
-
-<h3>Secure authentication (uses Firebase)</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038932-62662a7b-73a8-4be7-920b-b9eebac85d39.png)
-
-<h3>View your challenges</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038941-c1fe6aff-1b92-4752-97fe-dd2c854c1731.png)
-
-<h3>Visualize your challenge and see the leaderboard</h3>
-
-![image](https://user-images.githubusercontent.com/94875583/196038957-0a8d6415-f7ed-4005-b002-30cc10be3eda.png)
-
