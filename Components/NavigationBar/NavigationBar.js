@@ -30,57 +30,54 @@ function NavigationBar() {
   }
 
   return (
-    <View style={styles.card}>
-      <View style={styles.cardContent}>
-        <View style={styles.horizontalLayout}>
-          <Pressable style={styles.icon} 
+    <View style={navbar.card}>
+        <View style={navbar.horizontalLayout}>
+          <Pressable style={navbar.icon} 
               onPress={() => onHomePressed()}>
             <Image source={homeIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Home
             </Text>
           </Pressable>
-          <Pressable style={styles.icon} 
+          <Pressable style={navbar.icon} 
               onPress={() => onBrowsePressed()}>
             <Image source={searchIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Search
             </Text>
           </Pressable>
-          <Pressable style={styles.icon} 
+          <Pressable style={navbar.icon} 
               onPress={() => onCreatePressed()}>
             <Image source={createIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Create
             </Text>
           </Pressable>
-          <Pressable style={styles.icon} onPress={() => onProfilePressed()}>
+          <Pressable style={navbar.icon} onPress={() => onProfilePressed()}>
             <Image source={imageIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text>
               Profile</Text>
           </Pressable>
         </View>
-      </View>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
+const navbar = StyleSheet.create({
   card: {
-    width: '45%',
-    backgroundColor: '#ffffff',
-    position: 'fixed',
-    bottom: 0,
-    height: '100%',
-  },
-  cardContent: {
     width: '100%',
+    backgroundColor: '#ffffff',
+    flex: 1,
+    justifyContent: 'flex-end',
+    position: 'fixed',
+    paddingBottom: 40,
+    height: 100,
   },
   horizontalLayout: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingVertical: 15,
-    width: '225%',
+    width: '100%',
   },
   icon: {
     height: 30,

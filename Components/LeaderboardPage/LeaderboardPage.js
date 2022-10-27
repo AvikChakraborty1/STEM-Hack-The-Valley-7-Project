@@ -1,14 +1,18 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import { ImageBackground } from 'react-native-web'
+import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native'
 import ChallengeCard from '../ChallengeCard/ChallengeCard'
 import ProgressCard from './ProgressCard'
 import LeaderboardCard from './LeaderboardCard'
 import NavigationBar from '../NavigationBar/NavigationBar'
 
 function LeaderboardPage(props) {
-  var level = props.info.endValue && props.info.progress ? parseInt((props.info.progress / props.info.endValue) * 10, 10)  : 1
-  var progress = props.info.progress ? props.info.progress : 0;
-  var name  = props.info.name ? props.info.name: 'Challenge name';
+  var level =
+    props.info.endValue && props.info.progress
+      ? parseInt((props.info.progress / props.info.endValue) * 10, 10)
+      : 1
+  var progress = props.info.progress ? props.info.progress : 0
+  var name = props.info.name ? props.info.name : 'Challenge name'
+
+  const sky = require('../../assets/sky.png')
 
   const images = {
     1: require('../../assets/Tree/1.png'),
@@ -22,64 +26,69 @@ function LeaderboardPage(props) {
     9: require('../../assets/Tree/9.png'),
     10: require('../../assets/Tree/10.png'),
   }
-  
-  const sky = require('../../assets/sky.png')
 
   return (
-    <View style={{ flex: '1' }}>
-      <View style={{ height: '80%' }}>
-      <ImageBackground source={sky} style={styles.sky}>
-        <LeaderboardCard style={styles.leaderboard} /> 
-        <Image
-          source={images[level]}
-          style={{ width: '100%', minHeight: '100%', position: 'fixed', marginTop: '10px', resizeMode: 'contain' }}
-        />
-      </ImageBackground>
+    <>
+      <View style={styles.container}>
+        <ImageBackground source={sky} resizeMode="cover" style={styles.sky}>
+          <LeaderboardCard />
+
+          <Image
+            source={images[level]}
+            style={{
+              width: '100%',
+              height: '62%',
+              marginTop: 10,
+              resizeMode: 'contain',
+            }}
+          />
+        </ImageBackground>
       </View>
+
       <View style={styles.ground}>
-        <View style={styles.leaderboard}> 
-          <Text style={{fontWeight: 'bold',
-          fontSize: '20px',
-        }}>{name}</Text>
-        <Text style={{fontWeight: 'lighter',
-          fontSize: '20px',
-        }}>Progress: {progress}</Text>
+        <View style={styles.bottomText}>
+          <Text style={{ fontWeight: 'bold', fontSize: 20 }}>{name}</Text>
+          <Text style={{ fontWeight: 'lighter', fontSize: 20 }}>
+            Progress: {progress}
+          </Text>
         </View>
       </View>
-      <View style={styles.ground}>
-      <NavigationBar /> 
-      </View>
-    </View>
+    </>
   )
 }
 
 const styles = StyleSheet.create({
-  sky: {
-    height: '110%',
-    position: 'relative',
-    alignItems: 'center',
-    resizeMode: 'contain',
-    resizeMode: 'stretch',
+  container: {
+    flex: 1,
+    height: '100%',
+    width: '100%',
   },
-  leaderboard: {
-    textAlign: 'center',
-    marginTop: '10px',
+  sky: {
+    resizeMode: 'stetch',
+    height: '100%',
+    width: '100%',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+  bottomText: {
+    alignItems: 'center',
+    marginTop: 10,
     backgroundColor: '#E4EFCB',
     color: 'black',
-    fontSize: '30px',
-    paddingVertical: '5px',
+    fontSize: 30,
+    paddingVertical: 5,
     width: '70%',
   },
   ground: {
+    height: '15%',
     width: '100%',
-    height: '10%',
     backgroundColor: '#431f02',
     alignItems: 'center',
   },
   name: {
-    marginTop: '10px',
+    marginTop: 10,
     color: 'white',
-    fontSize: '24px',
+    fontSize: 24,
     fontWeight: 'bold',
   },
 })

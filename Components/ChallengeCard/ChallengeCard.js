@@ -23,7 +23,7 @@ function ChallengeCard(props) {
         </Text>
         <View style={styles.horizontalLayout}>
           <Text style={styles.numberOfPeopleText}>{ numParticipants } </Text>
-          <Image source={imageIcon} style={{ width: 20, height: 24 }} />
+          <Image source={imageIcon} style={{ width: 20, height: 24, resizeMode: 'contain' }} />
         </View>
       </View>
     </View>
@@ -33,35 +33,34 @@ function ChallengeCard(props) {
 const styles = StyleSheet.create({
   card: {
     width: '100%',
-    paddingVertical: '10px',
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    minHeight: '300px',
+    height: 300,
   },
   cardContent: {
     width: '90%',
-    marginVertical:'10px',
+    marginBottom: 30,
   },
   label: {
-    marginTop: '10px',
+    marginTop: 10,
     color: '#000000',
-    fontSize: '20px',
-    fontWeight: 'Bold',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
   text: {
-    marginTop: '10px',
+    marginTop: 10,
     color: '#000000',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Lighter',
   },
   numberOfPeopleText: {
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   horizontalLayout: {
     alignSelf: 'flex-end',
     flexDirection: 'row',
   },
-})
+}) 
 
 export default ChallengeCard

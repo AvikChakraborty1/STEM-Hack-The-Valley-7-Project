@@ -44,7 +44,6 @@ function ProfilePage() {
                 </View>
 
             </ScrollView>
-            <NavigationBar />
         </SafeAreaView>
     );
 }

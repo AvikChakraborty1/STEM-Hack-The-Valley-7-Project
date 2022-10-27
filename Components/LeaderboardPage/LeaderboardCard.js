@@ -26,30 +26,30 @@ function LeaderboardCard() {
 const styles = StyleSheet.create({
   card: {
     width: '80%',
-    paddingVertical: '10px',
+    paddingVertical: 20,
     backgroundColor: '#E4EFCB',
     alignItems: 'center',
-    marginTop: '20px',
+    marginTop: 50,
   },
   cardContent: {
     width: '90%',
-    marginVertical:'10px',
+    marginVertical:10,
   },
   label: {
-    marginTop: '5px',
+    marginTop: 5,
     color: '#000000',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Bold',
     textAlign: 'center',
   },
   text: {
-    marginTop: '10px',
+    marginTop: 10,
     color: '#000000',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Lighter',
   },
   numberOfPeopleText: {
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   horizontalLayout: {

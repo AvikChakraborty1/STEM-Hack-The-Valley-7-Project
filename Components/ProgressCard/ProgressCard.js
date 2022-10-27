@@ -44,19 +44,21 @@ const styles = StyleSheet.create({
     height: 110,
   },
   cardContent: {
-    width: 150,
+    width: '45%',
   },
   label: {
     marginTop: 20,
     color: '#000000',
     fontSize: 20,
     fontWeight: '700',
+    
   },
   text: {
     marginTop: 20,
     color: '#000000',
     fontSize: 20,
     fontWeight: '300',
+    
   },
   numberOfPeopleText: {
     fontSize: 20,
