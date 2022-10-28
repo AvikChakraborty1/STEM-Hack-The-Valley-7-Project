@@ -51,7 +51,7 @@ function ProfilePage() {
 
 const styles = StyleSheet.create({
     container : {
-        paddingTop: '20px',
+        paddingTop: 20,
         flex: 1,
         backgroundColor: "#ffffff",
         alignItems: "center",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: "#AEB5BC",
         textTransform: "uppercase",
-        fontWeight: "500",
+        fontWeight: '500',
     },
     image: {
         flex: 1,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     },
     statsBox: {
         alignItems: "center",
-        paddingHorizontal: '15px',
+        paddingHorizontal: 15,
         flex: 1,
     }
 });

@@ -2,7 +2,7 @@ import { StyleSheet, Text, Image, View, Pressable, TextInput } from 'react-nativ
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 
-function NavigationBar() {
+function NavigationBar(props) {
   var imageIcon = require('../../assets/peopleIcon.png')
   var homeIcon = require('../../assets/homeicon.png')
   var searchIcon = require('../../assets/homeicon.png')
@@ -11,49 +11,50 @@ function NavigationBar() {
   const navigation = useNavigation();
 
   const onHomePressed = () => {
-    console.warn("sign in pressed");
-    navigation.navigate('HomePage');
+    //console.warn("sign in pressed");
+    //navigation.navigate('HomePage');
+    props.handler(0)
   }
   const onBrowsePressed = () => {
-    console.warn("browse pressed");
-    navigation.navigate('BrowsePage');
+    //console.warn("browse pressed");
+    props.handler(1)
   }
 
   const onCreatePressed = () => {
-    console.warn("create pressed");
-    navigation.navigate('CreateChallengePage');
+    //console.warn("create pressed");
+    props.handler(2)
   }
 
   const onProfilePressed = () => {
-    console.warn("profile pressed");
-    navigation.navigate('ProfilePage');
+    //console.warn("profile pressed");
+    props.handler(3)
   }
 
   return (
     <View style={navbar.card}>
         <View style={navbar.horizontalLayout}>
           <Pressable style={navbar.icon} 
-              onPress={() => onHomePressed()}>
+              onPress={() => props.handler(0)}>
             <Image source={homeIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Home
             </Text>
           </Pressable>
           <Pressable style={navbar.icon} 
-              onPress={() => onBrowsePressed()}>
+              onPress={() => props.handler(1)}>
             <Image source={searchIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Search
             </Text>
           </Pressable>
           <Pressable style={navbar.icon} 
-              onPress={() => onCreatePressed()}>
+              onPress={() => props.handler(2)}>
             <Image source={createIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text >
               Create
             </Text>
           </Pressable>
-          <Pressable style={navbar.icon} onPress={() => onProfilePressed()}>
+          <Pressable style={navbar.icon} onPress={() => props.handler(3)}>
             <Image source={imageIcon} style={{ height: 40, resizeMode: 'contain' }} />
             <Text>
               Profile</Text>
@@ -62,7 +63,7 @@ function NavigationBar() {
     </View>
   )
 }
-//test remote
+
 const navbar = StyleSheet.create({
   card: {
     width: '100%',
@@ -83,6 +84,8 @@ const navbar = StyleSheet.create({
     height: 30,
     width: '25%',
     alignItems: 'center',
+    borderColor: 'red',
+    borderWidth: 1,
   },
 })
 
