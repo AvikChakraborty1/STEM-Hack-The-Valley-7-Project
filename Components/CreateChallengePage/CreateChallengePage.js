@@ -7,15 +7,15 @@ import { getDatabase, ref, onValue, set, get, child} from 'firebase/database';
 function CreateChallengePage() {
     const styles = StyleSheet.create({
       textAndTextBoxContainer : {
-        marginBottom : '20px',
+        marginBottom : '20%',
       },
       container:{
-        height: '100vh',
-        width:'100vw',
-        padding : '20px'
+        height: '100%',
+        width:'100%',
+        padding : 40
       },
       start:{
-        width: '40px'
+        width: '100%'
       }
     });
 
@@ -38,9 +38,9 @@ function CreateChallengePage() {
     
     return (
       <View style={styles.container}>
-       <HTVTextAndTextBox style={styles.textAndTextBoxContainer} text="Enter Challenge Name" textBoxHeight='60px'></HTVTextAndTextBox>
+       <HTVTextAndTextBox style={styles.textAndTextBoxContainer} text="Enter Challenge Name" textBoxHeight={60}></HTVTextAndTextBox>
 
-       <HTVTextAndTextBox style={styles.textAndTextBoxContainer} text="Enter Challenge Description" textBoxHeight='120px'></HTVTextAndTextBox>
+       <HTVTextAndTextBox style={styles.textAndTextBoxContainer} text="Enter Challenge Description" textBoxHeight={120}></HTVTextAndTextBox>
 
        <StartEndNumericInput></StartEndNumericInput>
 

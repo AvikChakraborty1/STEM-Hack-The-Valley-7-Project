@@ -65,28 +65,25 @@ function NavigationBar(props) {
 }
 
 const navbar = StyleSheet.create({
-  card: {
-    width: '100%',
-    backgroundColor: '#ffffff',
-    flex: 1,
-    justifyContent: 'flex-end',
-    position: 'fixed',
-    paddingBottom: 40,
-    height: 100,
-  },
-  horizontalLayout: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 15,
-    width: '100%',
-  },
-  icon: {
-    height: 30,
-    width: '25%',
-    alignItems: 'center',
-    borderColor: 'red',
-    borderWidth: 1,
-  },
+    card: {
+      width: '100%',
+      backgroundColor: '#ffffff',
+      flex: 1,
+      justifyContent: 'flex-end',
+      position: 'fixed',
+      paddingBottom: 40,
+      height: 100,
+    },
+    horizontalLayout: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      paddingVertical: 15,
+    },
+    icon: {
+      alignItems: 'center',
+      flex: 1,
+      height: 30,
+    },
 })
 
 export default NavigationBar

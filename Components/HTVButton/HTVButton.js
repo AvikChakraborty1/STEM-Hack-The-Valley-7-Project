@@ -9,15 +9,15 @@ function HTVButton(props) {
   const styles = StyleSheet.create({
     button: {
       paddingHorizontal: hpadding,
-      paddingVertical: '5px',
+      paddingVertical: 5,
       backgroundColor: '#E4EFCB',
-      borderRadius: '25px',
+      borderRadius: 25,
       marginVertical: 8,
       margin : 25,
     },
     text: {
       color: '#7D7973',
-      fontSize: '15px',
+      fontSize: 15,
       fontWeight: 'Medium',
       textAlign : 'center'
     }

@@ -4,20 +4,20 @@ import HTVTextBox from '../HTVTextBox/HTVTextBox';
 
 function NumericInputAndText(props) {
     const textBoxText = props.text ? props.text: 'default';
-    const textBoxHeight = props.textBoxHeight ? props.textBoxHeight: '120px';
+    const textBoxHeight = props.textBoxHeight ? props.textBoxHeight: 120;
     const styles = StyleSheet.create({
       text: {
         color: '#5B5B5B',
-        fontSize: '20px',
+        fontSize: 20,
         fontWeight: 'Medium',
         textAlign: 'center'
       },
       container : {
-        paddingHorizontal : '30px'
+        paddingHorizontal : 30
       },
       textInput:{
         color: '#8F877D',
-        fontSize: '20px',
+        fontSize: 20,
         fontWeight: 'Medium',
         height: textBoxHeight,
       }
