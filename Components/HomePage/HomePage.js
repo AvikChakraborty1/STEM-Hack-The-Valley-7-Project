@@ -13,6 +13,7 @@ import ProfilePage from '../ProfilePage/ProfilePage'
 import BrowsePage from '../BrowsePage/BrowsePage'
 import LeaderboardPage from '../LeaderboardPage/LeaderboardPage'
 import CreateChallengePage from '../CreateChallengePage/CreateChallengePage'
+import ProgressPage from '../ProgressCard/ProgressPage'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -35,6 +36,18 @@ export default function HomePage() {
   var searchIcon = require('../../assets/homeicon.png')
   var createIcon = require('../../assets/homeicon.png')
 
+  const images = {
+    1: require('../../assets/Tree/1.png'),
+    2: require('../../assets/Tree/2.png'),
+    3: require('../../assets/Tree/3.png'),
+    4: require('../../assets/Tree/4.png'),
+    5: require('../../assets/Tree/5.png'),
+    6: require('../../assets/Tree/6.png'),
+    7: require('../../assets/Tree/7.png'),
+    8: require('../../assets/Tree/8.png'),
+    9: require('../../assets/Tree/9.png'),
+    10: require('../../assets/Tree/10.png'),
+  } 
 
   const [page, setPage] = useState(3)
   const [challengeList, setChallengeList] = useState([])
@@ -101,20 +114,7 @@ export default function HomePage() {
               <ScrollView>
                 { 
                 page == 0 ? 
-                 challengeList.map((item) => {
-                  return (
-                    <Pressable onPress={() => onChallengedPressed(item)}>
-                      <ProgressCard
-                        rank={item.rank}
-                        name={item.name}
-                        level={parseInt(
-                          (item.progress / item.endValue) * 10,
-                          10
-                        )}
-                      />
-                    </Pressable>
-                  )
-                })
+                  <ProgressPage challengeList={challengeList} images={images}/>
                 : page == 1 ?
                   <BrowsePage />
                 : page == 2 ? 
