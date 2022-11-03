@@ -7,14 +7,13 @@ function HTVTextAndTextBox(props) {
     const styles = StyleSheet.create({
       text: {
         color: '#5B5B5B',
-        fontSize: '20px',
+        fontSize: 20,
         fontWeight: 'Medium',
         textAlign: 'center'
       },
       textAndTextBoxContainer : {
-        //marginBottom : '50px',
         justifyContent: 'center',
-        marginVertical: '20px',
+        marginVertical: 20,
       },
     });
     

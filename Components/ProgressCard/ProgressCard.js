@@ -6,19 +6,7 @@ function ProgressCard(props) {
   var rank = props.rank ? props.rank: '0';
 
   
-  const images = {
-    1: require('../../assets/Tree/1.png'),
-    2: require('../../assets/Tree/2.png'),
-    3: require('../../assets/Tree/3.png'),
-    4: require('../../assets/Tree/4.png'),
-    5: require('../../assets/Tree/5.png'),
-    6: require('../../assets/Tree/6.png'),
-    7: require('../../assets/Tree/7.png'),
-    8: require('../../assets/Tree/8.png'),
-    9: require('../../assets/Tree/9.png'),
-    10: require('../../assets/Tree/10.png'),
-  } 
-
+  const images = props.images;
   return (
     <View style={styles.card}>
       <View style={styles.horizontalLayout}>

@@ -20,7 +20,7 @@ function ProgressCard(props) {
 const styles = StyleSheet.create({
   card: {
     width: '70%',
-    paddingVertical: '10px',
+    paddingVertical: 10,
     backgroundColor: '#f1f1f1',
     justifyContent: 'left',
   },
@@ -28,19 +28,19 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   label: {
-    marginTop: '10px',
+    marginTop: 10,
     color: '#000000',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Bold',
   },
   text: {
-    marginTop: '10px',
+    marginTop: 10,
     color: '#000000',
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'Lighter',
   },
   numberOfPeopleText: {
-    fontSize: '20px',
+    fontSize: 20,
     fontWeight: 'bold',
   },
   horizontalLayout: {

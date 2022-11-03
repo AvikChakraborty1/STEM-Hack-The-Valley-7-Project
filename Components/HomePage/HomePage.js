@@ -9,8 +9,11 @@ import ProgressCard from '../ProgressCard/ProgressCard'
 import { initializeApp } from 'firebase/app'
 import { getDatabase, ref, onValue, set } from 'firebase/database'
 import { useNavigation } from '@react-navigation/native'
+import ProfilePage from '../ProfilePage/ProfilePage'
 import BrowsePage from '../BrowsePage/BrowsePage'
 import LeaderboardPage from '../LeaderboardPage/LeaderboardPage'
+import CreateChallengePage from '../CreateChallengePage/CreateChallengePage'
+import ProgressPage from '../ProgressCard/ProgressPage'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -27,12 +30,36 @@ const firebaseConfig = {
 let myApp = initializeApp(firebaseConfig)
 
 export default function HomePage() {
-  const navigation = useNavigation()
+
+  var imageIcon = require('../../assets/peopleIcon.png')
+  var homeIcon = require('../../assets/homeicon.png')
+  var searchIcon = require('../../assets/homeicon.png')
+  var createIcon = require('../../assets/homeicon.png')
+
+  const images = {
+    1: require('../../assets/Tree/1.png'),
+    2: require('../../assets/Tree/2.png'),
+    3: require('../../assets/Tree/3.png'),
+    4: require('../../assets/Tree/4.png'),
+    5: require('../../assets/Tree/5.png'),
+    6: require('../../assets/Tree/6.png'),
+    7: require('../../assets/Tree/7.png'),
+    8: require('../../assets/Tree/8.png'),
+    9: require('../../assets/Tree/9.png'),
+    10: require('../../assets/Tree/10.png'),
+  } 
+
+  const [page, setPage] = useState(3)
   const [challengeList, setChallengeList] = useState([])
   const [challengeSelected, setChallengeSelected] = useState(null)
 
   const onChallengedPressed = (item) => {
     setChallengeSelected(item)
+  }
+
+  const handler = (pageNum) => {
+    console.log(pageNum)
+    pageNum ? setPage(pageNum): setPage(0);
   }
 
   const challengeListener = () => {
@@ -74,7 +101,7 @@ export default function HomePage() {
           <>
             
             <View style={styles.scroller}>
-            <Image
+            {page <= 1 && <Image
               source={require('../../assets/stemText.png')}
               style={{
                 width: '100%',
@@ -83,27 +110,53 @@ export default function HomePage() {
                 marginTop: 40,
                 position: 'fixed',
               }}
-            />
+            />}
               <ScrollView>
-                {challengeList.map((item) => {
-                  return (
-                    <Pressable onPress={() => onChallengedPressed(item)}>
-                      <ProgressCard
-                        rank={item.rank}
-                        name={item.name}
-                        level={parseInt(
-                          (item.progress / item.endValue) * 10,
-                          10
-                        )}
-                      />
-                    </Pressable>
-                  )
-                })}
+                { 
+                page == 0 ? 
+                  <ProgressPage challengeList={challengeList} images={images}/>
+                : page == 1 ?
+                  <BrowsePage />
+                : page == 2 ? 
+                  <CreateChallengePage />
+                : page == 3 ?
+                  <ProfilePage />
+                : null
+                }
               </ScrollView>
             </View>
           </>
         )}
-        <NavigationBar />
+        <View style={styles.navbar.card}>
+          <View style={styles.navbar.horizontalLayout}>
+            <Pressable style={styles.navbar.icon} 
+                onPress={() => handler(0)}>
+              <Image source={homeIcon} style={{ height: 40, resizeMode: 'contain', width: '45%' }} />
+              <Text >
+                Home
+              </Text>
+            </Pressable>
+            <Pressable style={styles.navbar.icon} 
+                onPress={() => handler(1)}>
+              <Image source={searchIcon} style={{ height: 40, resizeMode: 'contain', width: '45%' }} />
+              <Text >
+                Search
+              </Text>
+            </Pressable>
+            <Pressable style={styles.navbar.icon} 
+                onPress={() => handler(2)}>
+              <Image source={createIcon} style={{ height: 40, resizeMode: 'contain',  width: '45%' }} />
+              <Text >
+                Create
+              </Text>
+            </Pressable>
+            <Pressable style={styles.navbar.icon} onPress={() => handler(3)}>
+              <Image source={imageIcon} style={{ height: 40, resizeMode: 'contain' , width: '45%'  }} />
+              <Text>
+                Profile</Text>
+            </Pressable>
+          </View>
+        </View>
       </View>
     )
   }
@@ -119,5 +172,26 @@ const styles = StyleSheet.create({
     height: '87%',
     width: '100%',
     backgroundColor: '#ffffff',
+  },
+  navbar: {
+    card: {
+      width: '100%',
+      backgroundColor: '#ffffff',
+      flex: 1,
+      justifyContent: 'flex-end',
+      position: 'fixed',
+      paddingBottom: 40,
+      height: 100,
+    },
+    horizontalLayout: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      paddingVertical: 15,
+    },
+    icon: {
+      alignItems: 'center',
+      flex: 1,
+      height: 30,
+    },
   }
 })
