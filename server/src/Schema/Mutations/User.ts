@@ -3,6 +3,7 @@ import {
     GraphQLID,
     GraphQLString 
 } from 'graphql';
+import { db } from '..';
 import { UserType } from '../TypeDefs/User';
 
 export const CREATE_USER = {
@@ -13,8 +14,8 @@ export const CREATE_USER = {
         Image: { type: GraphQLString },
         Email: { type: GraphQLString }
     },
-    resolve(parent: any, args: any) {
-        const { name, email } = args;
+    async resolve(parent: any, args: any) {
+        const res = await db.collection('Users').add(args)
         return args;
     }
 }
