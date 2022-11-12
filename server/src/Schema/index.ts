@@ -2,7 +2,7 @@ import { GraphQLSchema, GraphQLObjectType} from 'graphql'
 import { GET_ALL_USERS } from './Queries/User';
 import { CREATE_USER } from './Mutations/User';
 import * as admin from 'firebase-admin'
-import { GET_ALL_CHALLENGES } from './Queries/Challenge';
+import { GET_ALL_CHALLENGES, GET_CHALLENGE_BY_CATEGORY } from './Queries/Challenge';
 import { CREATE_CHALLENGE } from './Mutations/Challenge';
 const stemKey = require('./stemKey.json');
 
@@ -15,7 +15,8 @@ const RootQuery = new GraphQLObjectType({
     name: "RootQuery",
     fields: {
         getAllUsers: GET_ALL_USERS,
-        getAllChallenges: GET_ALL_CHALLENGES
+        getAllChallenges: GET_ALL_CHALLENGES,
+        getChallengeByCat: GET_CHALLENGE_BY_CATEGORY
     }
 });
 
