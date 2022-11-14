@@ -1,5 +1,5 @@
 import { GraphQLSchema, GraphQLObjectType} from 'graphql'
-import { GET_ALL_USERS } from './Queries/User';
+import { GET_ALL_USERS, GET_USER_BY_EMAIL } from './Queries/User';
 import { CREATE_USER } from './Mutations/User';
 import * as admin from 'firebase-admin'
 import { GET_ALL_CHALLENGES, GET_CHALLENGE_BY_CATEGORY } from './Queries/Challenge';
@@ -15,6 +15,7 @@ const RootQuery = new GraphQLObjectType({
     name: "RootQuery",
     fields: {
         getAllUsers: GET_ALL_USERS,
+        getUserByEmail: GET_USER_BY_EMAIL,
         getAllChallenges: GET_ALL_CHALLENGES,
         getChallengeByCat: GET_CHALLENGE_BY_CATEGORY
     }
